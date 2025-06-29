@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Appointment</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #e1bee7, #d1c4e9);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #4a148c;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #4a148c;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #8e24aa;
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #6a1b9a;
+    }
+
+    .result {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f3e5f5;
+      border-radius: 10px;
+      display: none;
+    }
+
+    .result p {
+      font-size: 1.1em;
+      color: #4a148c;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="health_information.html">Health Information</a></li>
+      <li><a href="ebook.html">Ebook Collection</a></li>
+      <li><a href="health_collection.html">Health Collection</a></li>
+      <li><a href="appointment_booking.html">Appointment Booking</a></li>
+      <li><a href="ai_chatbot.html">AI Chatbot</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="Policy.html">Library Policy</a></li>
+    </ul>
+      
+    <h1>Book an Appointment</h1>
+    <form id="appointmentForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" required>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" required>
+
+      <label for="time">Preferred Time:</label>
+      <input type="time" id="time" required>
+
+      <label for="service">Service Type:</label>
+      <select id="service" required>
+        <option value="General Consultation">General Consultation</option>
+        <option value="Health Screening">Health Screening</option>
+        <option value="Virtual Consultation">Virtual Consultation</option>
+        <option value="Health Workshop">Health Workshop</option>
+      </select>
+
+      <button type="submit">Book Appointment</button>
+    </form>
+
+    <div class="result" id="result">
+      <h2 style="color:#4a148c;">pointment Details:</h2>
+      <p><strong>Full Name:</strong> <span id="rName"></span></p>
+      <p><strong>Email:</strong> <span id="rEmail"></span></p>
+      <p><strong>Phone:</strong> <span id="rPhone"></span></p>
+      <p><strong>Date:</strong> <span id="rDate"></span></p>
+      <p><strong>Time:</strong> <span id="rTime"></span></p>
+      <p><strong>Service:</strong> <span id="rService"></span></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Ambil nilai dari borang
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      const service = document.getElementById('service').value;
+
+      // Tunjuk nilai di bawah borang
+      document.getElementById('rName').textContent = name;
+      document.getElementById('rEmail').textContent = email;
+      document.getElementById('rPhone').textContent = phone;
+      document.getElementById('rDate').textContent = date;
+      document.getElementById('rTime').textContent = time;
+      document.getElementById('rService').textContent = service;
+
+      // Paparkan bahagian result
+      document.getElementById('result').style.display = 'block';
+
+      // Optional: Scroll turun ke bawah automatik
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Information - Smart HealthCare Information Hub</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #f3e5f5, #e1bee7);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      justify-content: space-between;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      height: 120px;
+      margin-right: 20px;
+    }
+
+    .site-name {
+      font-size: 1.8em;
+      color: #4a148c;
+      font-weight: bold;
+    }
+
+    .login-btn {
+      background-color: #8e24aa;
+      color: white;
+      padding: 8px 16px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #8e24aa;
+      border-radius: 0 0 10px 10px;
+    }
+
+    nav li {
+      margin: 5px 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      display: block;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #6a1b9a;
+      color: #ffeb3b;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #6a1b9a;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      color: #555;
+      font-size: 1.1em;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .info-button {
+      background-color: #ba68c8;
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      text-decoration: none;
+      font-size: 1.05em;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .info-button:hover {
+      background-color: #9c27b0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #777;
+      font-size: 0.9em;
+      padding: 20px;
+      border-top: 1px solid #ccc;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .left-header {
+        flex-direction: column;
+      }
+      header img {
+        height: 90px;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="left-header">
+      <a href="index.html"><img src="https://i.imgur.com/4xaiN16.png" alt="Logo"></a>
+      <div class="site-name">Smart HealthCare Information Hub</div>
+    </div>
+    <button class="login-btn" onclick="alert('Redirecting to login page...')">Login</button>
+  </header>
+
+  <!-- Nav -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="health_information.html">Health Information</a></li>
+      <li><a href="ebook.html">Ebook Collection</a></li>
+      <li><a href="health_collection.html">Health Collection</a></li>
+      <li><a href="appointment_booking.html">Appointment Booking</a></li>
+      <li><a href="ai_chatbot.html">AI Chatbot</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="Policy.html">Library Policy</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Health Information</h1>
+    <p>Explore trusted digital health resources to empower your wellness journey.</p>
+
+    <div class="info-grid">
+      <a class="info-button" href="https://www.scribd.com/document/368707025/Healthy-Living-eBook" target="_blank">
+        Healthy Living eBook (Scribd)
+      </a>
+      <a class="info-button" href="https://www.mylifewellloved.com/product-category/digital-products/" target="_blank">
+         Health & Wellness Digital Products
+      </a>
+      <a class="info-button" href="https://www.mea.elsevierhealth.com/nursing-midwifery/nutrition?srsltid=AfmBOoq9IJBAV4bla1zB6YcwKgD8kAFFLXLEOHb4RnjCZC9-vXI0SUYv" target="_blank">
+         Elsevier: Nutrition & Midwifery
+      </a>
+      <a class="info-button" href="https://www.mmgazette.com/e-books/" target="_blank">
+         Malaysian Medical Gazette eBooks
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Smart HealthCare Information Hub. All rights reserved.
+  </footer>
+
+  
+ 
+
+</body>
+</html>

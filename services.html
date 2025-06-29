@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Services - Smart HealthCare Information Hub</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #e1bee7, #d1c4e9);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      color: #4a148c;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #6a1b9a;
+      margin-bottom: 30px;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+      background-color: #8e24aa;
+      padding: 10px;
+      border-radius: 12px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      background-color: #6a1b9a;
+      border-radius: 8px;
+      transition: background-color 0.3s, transform 0.2s ease;
+      font-size: 0.9em;
+    }
+
+    .navbar a:hover {
+      background-color: #ab47bc;
+      transform: translateY(-2px);
+    }
+
+    .service-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-around;
+    }
+
+    .service-item {
+      width: 45%;
+      background-color: #f9f9f9;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .service-item h3 {
+      color: #6a1b9a;
+      margin-bottom: 15px;
+    }
+
+    .service-item p {
+      color: #4a148c;
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    .service-item a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #6a1b9a;
+      color: white;
+      font-size: 1em;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .service-item a:hover {
+      background-color: #8e24aa;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 8px 16px;
+      font-size: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background-color: #6a1b9a;
+      border-radius: 8px;
+      transition: background-color 0.3s, transform 0.2s ease;
+    }
+
+    .back-button:hover {
+      background-color: #8e24aa;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .service-item {
+        width: 100%;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navbar a {
+        width: 80%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="health_information.html">Health Information</a></li>
+      <li><a href="ebook.html">Ebook Collection</a></li>
+      <li><a href="health_collection.html">Health Collection</a></li>
+      <li><a href="appointment_booking.html">Appointment Booking</a></li>
+      <li><a href="ai_chatbot.html">AI Chatbot</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="Policy.html">Library Policy</a></li>
+    </ul>
+    <h1>Our Services</h1>
+    <h2>Explore Our Health-Related Services</h2>
+
+    <div class="service-list">
+      <div class="service-item">
+        <h3>Health Educational Resources</h3>
+        <p>We provide materials to help you stay informed about healthy living, disease prevention, and overall well-being.</p>
+        <a href="https://www.cdc.gov/healthyweight/index.html" target="_blank">Learn More</a>
+      </div>
+
+      <div class="service-item">
+        <h3>Interactive Workshops</h3>
+        <p>Join hands-on workshops and webinars hosted by health professionals to learn about health and wellness.</p>
+        <a href="https://superwellness.co.uk/our-services/wellbeing-webinars-and-workshops/" target="_blank">Join a Workshop</a>
+      </div>
+
+      <div class="service-item">
+        <h3>AI Chatbot for Health Inquiries</h3>
+        <p>Our chatbot gives quick answers about symptoms, medications, and wellness tips to support your health journey.</p>
+        <a href="ai_chatbot.html">Chat with AI</a>
+      </div>
+
+      <div class="service-item">
+        <h3>Appointment Booking</h3>
+        <p>Schedule, reschedule, or cancel appointments with health experts through our convenient online platform.</p>
+        <a href="appointment_booking.html">Book Now</a>
+      </div>
+
+      <div class="service-item">
+        <h3>Support Our Health Library</h3>
+        <p>Your donation helps us provide better resources, workshops, and digital tools to the community.</p>
+        <p><strong>Any amount is appreciated – RM1, RM20, RM50, or RM100</strong></p>
+        <a href="donate.html">Donate Now</a>
+      </div>
+      
+      <div class="service-item">
+        <h3>Virtual Health Consultations</h3>
+        <p>Meet health professionals virtually for checkups or consultations from the comfort of your home.</p>
+        <a href="https://www.teladoc.com/" target="_blank">Start Consultation</a>
+      </div>
+
+      <div class="service-item">
+        <h3>Self-Care Tools</h3>
+        <p>Access health trackers, mental wellness guides, and tips to help you lead a healthier lifestyle every day.</p>
+        <a href="https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health" target="_blank">Explore Tools</a>
+      </div>
+
+     
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - Smart HealthCare Information Hub</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #e1bee7, #d1c4e9);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #4a148c;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      margin-bottom: 30px;
+      background-color: #8e24aa;
+      border-radius: 8px;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    .event-section {
+      background-color: #f3e5f5;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .event-section h2 {
+      color: #6a1b9a;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .event-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .event-item {
+      background-color: #fff;
+      padding: 20px;
+      width: 280px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .event-item:hover {
+      transform: scale(1.05);
+    }
+
+    .event-item h3 {
+      color: #4a148c;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .event-item p {
+      color: #777;
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+
+    .event-date {
+      font-size: 1.1em;
+      color: #8e24aa;
+      margin-bottom: 15px;
+    }
+
+    .event-btn {
+      background-color: #8e24aa;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .event-btn:hover {
+      background-color: #6a1b9a;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      border-radius: 8px;
+    }
+
+    .modal-header {
+      font-size: 1.5em;
+      color: #4a148c;
+      text-align: center;
+    }
+
+    .modal-body input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    .modal-body button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #8e24aa;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .modal-body button:hover {
+      background-color: #6a1b9a;
+    }
+
+    .close {
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      color: #aaa;
+    }
+
+    .close:hover {
+      color: black;
+      cursor: pointer;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background-color: #6a1b9a;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #8e24aa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="health_information.html">Health Information</a></li>
+      <li><a href="ebook.html">Ebook Collection</a></li>
+      <li><a href="health_collection.html">Health Collection</a></li>
+      <li><a href="appointment_booking.html">Appointment Booking</a></li>
+      <li><a href="ai_chatbot.html">AI Chatbot</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="Policy.html">Library Policy</a></li>
+    </ul>
+  </nav>
+
+  <!-- Events Section -->
+  <div class="container">
+    <h1>Upcoming Events</h1>
+    <div class="event-section">
+      <h2>Stay Updated with Our Latest Health Events</h2>
+      <div class="event-list">
+        <!-- Event 1 -->
+        <div class="event-item">
+          <h3>Health Screening Day</h3>
+          <p>Join us for a free health screening event.</p>
+          <p class="event-date">Date: May 15, 2026</p>
+          <button class="event-btn" onclick="openModal('Screening')">Register Now</button>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-item">
+          <h3>Virtual Health Talk</h3>
+          <p>Live virtual session on mental health and wellness.</p>
+          <p class="event-date">Date: May 22, 2026</p>
+          <button class="event-btn" onclick="openModal('Virtual')">Register Now</button>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-item">
+          <h3>Nutrition & Wellness Workshop</h3>
+          <p>Interactive workshop on healthy eating habits.</p>
+          <p class="event-date">Date: June 1, 2026</p>
+          <button class="event-btn" onclick="openModal('Workshop')">Register Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Templates -->
+    <div id="modalScreening" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('Screening')">&times;</span>
+        <div class="modal-header">Register for Health Screening Day</div>
+        <div class="modal-body">
+          <form onsubmit="showSuccess(event)">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalVirtual" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('Virtual')">&times;</span>
+        <div class="modal-header">Register for Virtual Health Talk</div>
+        <div class="modal-body">
+          <form onsubmit="showSuccess(event)">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalWorkshop" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('Workshop')">&times;</span>
+        <div class="modal-header">Register for Nutrition & Wellness Workshop</div>
+        <div class="modal-body">
+          <form onsubmit="showSuccess(event)">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-link">
+      <a href="index.html" class="back-button">← Back to Home</a>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    function openModal(eventType) {
+      document.getElementById("modal" + eventType).style.display = "block";
+    }
+
+    function closeModal(eventType) {
+      document.getElementById("modal" + eventType).style.display = "none";
+    }
+
+    function showSuccess(e) {
+      e.preventDefault();
+      alert("Registration Successful! Thank you for joining.");
+      document.querySelectorAll(".modal").forEach(m => m.style.display = "none");
+    }
+  </script>
+</body>
+</html>
